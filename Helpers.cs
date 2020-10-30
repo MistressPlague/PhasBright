@@ -1,10 +1,19 @@
-﻿using System.Collections.Generic;
+
+using MelonLoader;
+
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using UnityEngine;
+
 using Object = UnityEngine.Object;
 
 namespace PhasBright
 {
-    class Helpers
+    public class Helpers
     {
         public static Player GetLocalPlayer()
         {
@@ -24,9 +33,9 @@ namespace PhasBright
                 {
                     if (player != null)
                     {
-                        if (player.view != null)
+                        if (player.field_Public_PhotonView_0 != null)
                         {
-                            if (player.view.isMine)
+                            if (player.field_Public_PhotonView_0.AmOwner)
                             {
                                 return player;
                             }
