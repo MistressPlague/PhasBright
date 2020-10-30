@@ -1,10 +1,13 @@
-﻿using MelonLoader;
+using MelonLoader;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using UnityEngine;
+
 using Object = UnityEngine.Object;
 
 namespace PhasBright
@@ -40,7 +43,7 @@ namespace PhasBright
                 return;
             }
 
-            var boneTransform = LocalPlayer.charAnim.GetBoneTransform(HumanBodyBones.Head);
+            var boneTransform = LocalPlayer.field_Public_Animator_0.GetBoneTransform(HumanBodyBones.Head);
 
             if (boneTransform == null)
             {
